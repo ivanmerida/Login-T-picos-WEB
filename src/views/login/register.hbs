@@ -1,0 +1,122 @@
+<!--<div class="block mx-auto my-12 p-8 bg-white w-2/4 border border-gray-200 rounded-lg shadow-lg">
+
+    <h1 class="text-5xl m-16 font-bold text-center">Registro</h1>
+    <form action="" method="post" class="mt-4">
+        <div>
+            <label for="" class="w-1/4">Nombre del usuario</label>
+            <select name="" id="">
+                <option value="" class="">Nombre 1</option>
+            </select><br />
+        </div>
+        <div>
+            <label for="" class="w-1/4">Login del usuario</label>
+            <input type="text" name="name" placeholder="Login"
+                class="border border-gray-200 w-3/4 text-lg placeholder-gray-500 p-2 my-2 focus:gb-white" required>
+        </div>
+
+        <label for="" class="w-1/2">Password del usuario</label>
+        <input type="password" name="password" placeholder="Contraseña"
+            class="border border-gray-200 w-2/4 text-lg placeholder-gray-500 p-2 my-2 focus:gb-white" required> <br />
+        <label for="" class="w-1/2">Fecha Inicio</label>
+        <input type="date" name="password" placeholder="Contraseña"
+            class="border border-gray-200 w-3/4 text-lg placeholder-gray-500 p-2 my-2 focus:gb-white" required>
+        <label for="" class="w-1/2">Fecha Fin</label>
+        <input type="date" name="password" placeholder="Contraseña"
+            class="border border-gray-200 w-3/4 text-lg placeholder-gray-500 p-2 my-2 focus:gb-white" required>
+        <label for="" class="w-1/2">Estado de la cuenta</label>
+        <input type="checkbox" name="password" placeholder="Contraseña"
+            class="border border-gray-200 w-1/4 text-lg placeholder-gray-500 p-2 my-2 focus:gb-white" required>
+        <button type="submit" class="rounded-md gb-purple-500 w-3/4 text-lg text-white font-semibold p-2 my-3
+        bg-purple-600 focus:bg-purple-700">Enviar</button>
+        {{#if error}}
+        <p class="text-red-500 font-bold text-lg my-3">*{{error}}</p>
+        {{/if}}
+    </form>
+</div>-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 mt-3 col-xs-12">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre del usuario</label>
+                    <div class="input-group mb-3">
+                        <select class="custom-select" id="inputGroupSelect01">
+                            {{#if data}}
+                                {{#each}}
+                                <option selected>Choose...</option>
+                                <option value="{{nombress}}">{{item.nombress}}</option>
+                                {{/for}}
+                            {{else}}
+                            <option value="1">ERROR</option>
+                            {{/if}}
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Login del usuario</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Contraseña del usuario</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Fecha de Inicio</label>
+                    <input type="date" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Fecha de Fin</label>
+                    <input type="date" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Estado de la cuenta</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+        <div class="col-lg-9 col-md-9 col-xs-12 mt-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">CvUser</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Login</th>
+                        <th scope="col">FecIni</th>
+                        <th scope="col">FecFin</th>
+                        <th scope="col">EdoCta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

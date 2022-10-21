@@ -1,0 +1,43 @@
+
+
+<div class="block mx-auto my-12 p-8 bg-white w-1/3 border border-gray-200 rounded-lg shadow-lg">
+    <h1 class="text-5xl m-2 font-bold text-center">Login</h1>
+    <form action="" method="post" class="mt-4">
+        <input type="text" name="user" placeholder="Usuario"
+            class="border border-gray-200 w-full text-lg placeholder-gray-500 p-2 my-2 focus:gb-white" required>
+        <div class="border border-gray-200">
+            <input type="password" name="password" id="password" placeholder="Contraseña"
+                class="w-5/6 text-lg placeholder-gray-500 p-2 my-2 focus:gb-white" required>
+            <img src="https://cdn-icons-png.flaticon.com/24/2767/2767146.png" id="show-password" onclick="showPass()"
+                class="mt-4 mr-4 cursor-pointer display-flex float-right" />
+        </div>
+        <div class="text-center">
+            <button type="submit" class="rounded-md gb-purple-500 w-1/3 mt-4 text-lg text-white font-semibold p-2 my-3
+            bg-purple-600 focus:bg-purple-700">Enviar</button>
+        </div>
+        {{#if error}}
+        <p class="text-red-500 font-bold text-lg my-3">*{{error}}</p>
+        {{/if}}
+    </form>
+</div>
+<!--
+<div class="cotainer" >
+    <div class="formulario">
+        <form action="" method="post" class="mt-4">
+            <div class="form-group col-md-3">
+                <label for="exampleInputEmail1">Usuario</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="user"
+                    placeholder="Usuario">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group col-md-3">
+                <button type="submit" class="btn" style="width: 100%; background: purple; color: #fff;">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>-->

@@ -1,0 +1,111 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Node.js MySql</title>
+
+    <!-- Tailwind CSS Link -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css"
+    />
+    <!-- CSS only -->
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <!-- Fontawesome Link -->
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet" />
+    <script>
+        function showPass() {
+            const show_password = document.getElementById('show-password');
+            const password = document.getElementById('password');
+            if (password.type == 'password') {
+                password.type = 'text';
+                show_password.src = "https://cdn-icons-png.flaticon.com/24/63/63568.png";
+                setTimeout(function () {
+                    password.type = 'password';
+                    show_password.src = "https://cdn-icons-png.flaticon.com/24/2767/2767146.png";
+                }, 3000);
+            } else {
+                password.type = 'password';
+                show_password.src = "https://cdn-icons-png.flaticon.com/24/2767/2767146.png";
+            }
+        }
+        function showPass2() {
+            const show_password = document.getElementById('show-password2');
+            const password = document.getElementById('password2');
+            if (password.type == 'password') {
+                password.type = 'text';
+                show_password.src = "https://cdn-icons-png.flaticon.com/24/63/63568.png";
+                setTimeout(function () {
+                    password.type = 'password';
+                    show_password.src = "https://cdn-icons-png.flaticon.com/24/2767/2767146.png";
+                }, 3000);
+            } else {
+                password.type = 'password';
+                show_password.src = "https://cdn-icons-png.flaticon.com/24/2767/2767146.png";
+            }
+        }
+        function showPass3() {
+            const show_password = document.getElementById('show-password3');
+            const password = document.getElementById('password3');
+            if (password.type == 'password') {
+                password.type = 'text';
+                show_password.src = "https://cdn-icons-png.flaticon.com/24/63/63568.png";
+                setTimeout(function () {
+                    password.type = 'password';
+                    show_password.src = "https://cdn-icons-png.flaticon.com/24/2767/2767146.png";
+                }, 3000);
+            } else {
+                password.type = 'password';
+                show_password.src = "https://cdn-icons-png.flaticon.com/24/2767/2767146.png";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"  style="background: rgb(236, 203, 236) !important;"> 
+        <div class="container"> 
+            <h1 class="text-muted">The Blossom</h1>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav navbar-right">
+                {{#if name}}
+                <li class="nav-item active">
+                    <p>{{name}}</p>
+                </li>
+                <li class="nav-item dropdown mr-3">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        Configuraciones
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/">Inicio</a>
+                        <a class="dropdown-item text-red" href="/register">Registro</a>
+                        <a class="dropdown-item" href="/pass">Cambiar contraseña</a>
+                        <a class="dropdown-item text-red" href="/logout">Cerrar sesión</a>
+                    </div>
+                </li>
+                {{else}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+    </nav>
+    {{{body}}}
+</body>
+
+</html>
